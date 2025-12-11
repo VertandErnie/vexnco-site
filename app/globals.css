@@ -1,22 +1,26 @@
 /* -----------------------------------
-   Global Background + Soft Gradient
+   Tailwind Layers
+----------------------------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------------------
+   Global Background + Soft VE/NCO Gradient Drift
 ----------------------------------- */
 
 body {
-  background: radial-gradient(
-      circle at 0% 0%,
-      rgba(34, 211, 238, 0.12),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 100% 100%,
-      rgba(16, 185, 129, 0.12),
-      transparent 55%
-    ),
-    #020617; /* slate-950 */
-  transition: background 2s ease;
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.12), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.12), transparent 55%),
+    #020617; /* Slate-950 base */
   background-size: 200% 200%;
   animation: gradient-shift 60s ease infinite;
+  color: rgb(226, 232, 240); /* Slate-200 text */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
 }
 
 @keyframes gradient-shift {
@@ -32,7 +36,31 @@ body {
 }
 
 /* -----------------------------------
-   Section Rhythm
+   Box Model Reset
+----------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* -----------------------------------
+   Typography Refinements
+----------------------------------- */
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  margin-top: 0.5rem;
+}
+
+p {
+  margin-top: 1rem;
+  line-height: 1.65;
+}
+
+/* -----------------------------------
+   Section Layout System
 ----------------------------------- */
 
 .section {
@@ -49,25 +77,97 @@ body {
   padding: 5rem 1.75rem;
 }
 
-h1, h2, h3 {
-  letter-spacing: -0.01em;
-}
-
-/* Improve paragraph flow */
-p {
-  margin-top: 1rem;
-  line-height: 1.65;
-}
-
-/* Divider used later */
+/* Subtle section divider (used between conceptual blocks) */
 .section-divider {
   height: 1px;
   width: 100%;
   background: linear-gradient(
     to right,
-    rgba(255,255,255,0) 0%,
-    rgba(148,163,184,0.25) 50%,
-    rgba(255,255,255,0) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(148, 163, 184, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
   );
   margin: 4rem 0;
+}
+
+/* -----------------------------------
+   Card Styling (Unified VE/NCO Aesthetic)
+----------------------------------- */
+
+.card {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: radial-gradient(
+      circle at top left,
+      rgba(45, 212, 191, 0.15),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(37, 99, 235, 0.12),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.88); /* Deep slate backdrop */
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.65);
+  padding: 1.5rem;
+}
+
+/* -----------------------------------
+   Chip Styles (Section Labels)
+----------------------------------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(15, 23, 42, 0.7);
+  color: rgb(148, 163, 184);
+}
+
+.chip-dot-ve {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(to bottom right, #22d3ee, #38bdf8);
+}
+
+.chip-dot-nco {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #22c55e;
+}
+
+.chip-dot-both {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 0.25rem;
+  background: conic-gradient(
+    from 135deg,
+    #22d3ee,
+    #22c55e,
+    #22d3ee
+  );
+}
+
+/* -----------------------------------
+   Simple Grid Helpers
+----------------------------------- */
+
+.grid-2 {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1.4fr 1fr;
+  }
 }
