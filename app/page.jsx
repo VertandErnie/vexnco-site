@@ -4,31 +4,30 @@ import VEMicroCard from "../components/VEMicroCard";
 export default function HomePage() {
   return (
     <section className="section bg-ve-hero rounded-ve relative overflow-hidden">
+      {/* molten + ember glow accents */}
+      <div className="pointer-events-none absolute -top-40 -left-40 h-96 w-96 rounded-full bg-molten/10 blur-[160px]" />
+      <div className="pointer-events-none absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-ember/10 blur-[160px]" />
+
       <div className="grid gap-16 lg:grid-cols-2 items-start">
 
-        {/* LEFT COLUMN */}
+        {/* LEFT */}
         <div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <div className="ve-dot" />
-            <span className="ve-section-label">Operational Physics Layer</span>
+            <div className="ve-section-label">Operational Physics Layer</div>
           </div>
 
-          <h1 className="mt-6 text-4xl leading-tight font-semibold">
+          <h1 className="mt-6 text-4xl font-semibold text-concrete">
             The physics of work, finally formalized.
           </h1>
 
-          <p className="mt-5 text-slate-300 max-w-xl text-[1.05rem] leading-relaxed">
-            Organizations don’t fail because people fail — they fail because the system
-            they’re inside has no consistent laws. VE defines those laws. NCO turns 
-            them into execution. Together, they create a stable operational layer that 
-            ultimately enables autopilot for how work runs.
+          <p className="mt-5 text-frost max-w-xl text-[1.05rem] leading-relaxed">
+            Organizations don’t fail because people fail — they fail because the 
+            system itself has no governing physics. VE defines those laws. NCO 
+            turns them into execution. Together, they create a stable operational 
+            layer that eventually powers autopilot for work.
           </p>
 
-          <p className="mt-4 text-slate-400 max-w-xl text-[0.95rem]">
-            Start with the high-level model, then explore the physics only when it’s helpful.
-          </p>
-
-          {/* CTA CARDS */}
           <div className="mt-10 grid gap-4 max-w-md">
             <VEMicroCard
               title="1 · The Problem"
@@ -48,30 +47,30 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN — VE PANEL */}
-        <VEPanel className="mt-6">
-          <p className="text-[0.7rem] uppercase tracking-[0.2em] text-slate-400">
-            How to Read This Portal
-          </p>
+        {/* RIGHT */}
+        <VEPanel className="mt-10">
+          <p className="ve-section-label">How to Read This Portal</p>
 
-          <ul className="mt-4 space-y-3 text-frost/90 text-[0.94rem] leading-relaxed">
+          <ul className="mt-4 space-y-3 text-concrete/90 text-[0.94rem] leading-relaxed">
             <li>
-              Start with <span className="text-molten font-medium">The Problem</span>{" "}
-              to anchor why VE exists.
+              Begin with <span className="text-molten font-medium">The Problem</span>{" "}
+              to ground VE’s purpose.
             </li>
             <li>
-              Skim the <span className="text-ember font-medium">VE Model</span> and{" "}
+              Skim{" "}
+              <span className="text-ember font-medium">VE Model</span> and{" "}
               <span className="text-ember font-medium">NCO Execution</span>{" "}
-              pages to see the physics and doctrine.
+              to see the physics and doctrine.
             </li>
             <li>
-              Explore <span className="text-molten font-medium">Prototypes</span>{" "}
-              only if you want concrete behaviors.
+              Explore{" "}
+              <span className="text-molten font-medium">Prototypes</span>{" "}
+              if you want concrete behaviors.
             </li>
           </ul>
 
-          <p className="mt-4 text-[0.8rem] text-slate-500">
-            Clarity first. Depth only when helpful.
+          <p className="mt-4 text-[0.8rem] text-frost/70">
+            Clarity first. Depth only when useful.
           </p>
         </VEPanel>
       </div>
