@@ -2,13 +2,17 @@ export default function VEMicroCard({ title, subtitle, href }) {
   return (
     <a
       href={href}
-      className="block rounded-ve border border-carbon hover:border-ember/60 bg-carbon/80 hover:bg-carbon/90 transition shadow-ve-panel px-5 py-4 group"
+      className="
+        block rounded-ve border border-graphite bg-carbon/80 
+        hover:border-molten/60 hover:bg-carbon/90 transition
+        shadow-ve-soft backdrop-blur-sm px-5 py-4 group
+      "
     >
-      <div className="text-[0.95rem] text-frost font-medium group-hover:text-molten">
+      <div className="text-concrete text-[1rem] font-medium group-hover:text-molten">
         {title}
       </div>
 
-      <div className="mt-1 text-[0.7rem] uppercase tracking-wide text-slate-400 group-hover:text-ember">
+      <div className="mt-1 text-[0.7rem] uppercase tracking-[0.16em] text-frost/70 group-hover:text-ember">
         {subtitle} →
       </div>
     </a>
