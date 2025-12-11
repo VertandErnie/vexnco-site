@@ -171,3 +171,29 @@ p {
     grid-template-columns: 1.4fr 1fr;
   }
 }
+/* VE GLOBAL OVERRIDES (Brand Layer) */
+
+.ve-section-label {
+  @apply uppercase tracking-[0.22em] text-[0.7rem] text-fog;
+}
+
+.ve-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: linear-gradient(to bottom right, #D25A2C, #E6AE52);
+  box-shadow: 0 0 6px rgba(210,90,44,0.8);
+}
+
+.ve-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(230,174,82,0.35) 25%,
+    rgba(210,90,44,0.35) 50%,
+    transparent 100%
+  );
+  margin: 3.5rem 0;
+}
