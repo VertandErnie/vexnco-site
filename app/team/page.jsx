@@ -5,14 +5,7 @@ export default function TeamPage() {
     <PageSection
       eyebrow="Team & Ask"
       title="Why us, and where you fit."
-      subtitle={
-        <>
-          This is where we talk directly to Peter: the scars and patterns you
-          and Chris have collected across industries, the IP already embedded
-          in the system, and how a technical mind like his bridges theory to
-          platform.
-        </>
-      }
+      description="This is where we speak directly to Peter: the scars, patterns, and system-level thinking that already exist — and how a technical partner helps turn theory into platform."
     />
   );
 }
