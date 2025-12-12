@@ -5,13 +5,7 @@ export default function RoadmapPage() {
     <PageSection
       eyebrow="Roadmap"
       title="From model to platform to autopilot."
-      subtitle={
-        <>
-          This outlines the staged build: establishing VE and NCO as a coherent
-          model, building the rules engine and drift detection, then layering
-          increasingly autonomous operations.
-        </>
-      }
+      description="This outlines the staged build: establishing VE and NCO as a coherent model, layering rules and drift detection, and gradually increasing autonomy."
     />
   );
 }
