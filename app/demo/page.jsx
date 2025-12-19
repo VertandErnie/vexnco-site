@@ -8,7 +8,7 @@ export default function DemoPage() {
       {/* Full-bleed iframe container */}
       <div className="relative h-full w-full">
         <iframe
-          src="https://codepen.io/team/vert/live/pvymVNM"
+          src="https://codepen.io/team/vert/live/pvymVNM?default-tab=result&embed-version=2"
           title="Operational Physics Shell Demo"
           className="absolute inset-0 w-full h-full border-0"
           loading="lazy"
