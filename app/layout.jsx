@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "VE × NCO – Private Prototype",
   description:
-    "VE operational physics and NCO execution model — private concept portal."
+    "VE operational physics and NCO execution model — private concept portal.",
 };
 
 export default function RootLayout({ children }) {
@@ -57,6 +57,7 @@ export default function RootLayout({ children }) {
                   ["NCO", "/nco"],
                   ["Prototypes", "/prototypes"],
                   ["Roadmap", "/roadmap"],
+                  ["Demo", "/demo"],
                   ["Team & Ask", "/team"],
                 ].map(([label, href]) => (
                   <a
