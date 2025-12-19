@@ -75,7 +75,7 @@ export default function HomePage() {
 
         {/* Gentle guidance (not a panel) */}
         <p className="mt-10 max-w-xl text-[0.85rem] text-frost/60">
-          Start broad. Go deeper only if it’s useful.
+          Clarity before complexity.
         </p>
       </div>
     </section>
