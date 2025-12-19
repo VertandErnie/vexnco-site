@@ -26,4 +26,18 @@ export default function DemoPage() {
         </div>
 
         {/* Embedded CodePen */}
-        <div className="mt-10 rounded-[24px] overflow-hidden border border-white/5 bg-black shadow-[0_40px_120px_rgba(0_]()
+        <div className="mt-10 rounded-[24px] overflow-hidden border border-white/5 bg-black shadow-[0_40px_120px_rgba(0,0,0,0.8)]">
+          <iframe
+            src="https://codepen.io/team/vert/live/pvymVNM"
+            title="Operational Physics Shell Demo"
+            className="w-full h-[85vh] bg-black"
+            loading="lazy"
+            frameBorder="0"
+            allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+            allowFullScreen
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
