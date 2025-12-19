@@ -26,3 +26,21 @@ export default function DemoPage() {
         {/* Embed */}
         <div className="mt-10 rounded-[24px] overflow-hidden border border-white/5 bg-black/40 shadow-[0_40px_120px_rgba(0,0,0,0.8)]">
           <iframe
+            export default function DemoPage() {
+  return (
+    <section className="min-h-screen bg-[#0b0b0b]">
+      <div className="max-w-[1400px] mx-auto px-4 py-6">
+        <div className="rounded-[24px] overflow-hidden border border-white/5 shadow-[0_40px_120px_rgba(0,0,0,0.7)]">
+          <iframe
+            src="https://codepen.io/team/vert/live/pvymVNM"
+            title="Operational Physics Shell Demo"
+            className="w-full h-[85vh] bg-black"
+            loading="lazy"
+            allow="fullscreen"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
