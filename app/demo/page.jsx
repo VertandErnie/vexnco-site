@@ -6,12 +6,6 @@ export default function DemoPage() {
       <div className="pointer-events-none absolute -top-64 -left-64 h-[700px] w-[700px] rounded-full bg-ember/10 blur-[240px]" />
       <div className="pointer-events-none absolute -bottom-64 -right-64 h-[700px] w-[700px] rounded-full bg-molten/10 blur-[240px]" />
 
-      {/* Context label */}
-      <div className="absolute top-6 left-6 z-20 flex items-center gap-2 text-[0.7rem] tracking-widest uppercase text-frost/50">
-        <span className="h-1.5 w-1.5 rounded-full bg-molten" />
-        Interactive Prototype
-      </div>
-
       {/* Full-bleed iframe container */}
       <div className="relative h-full w-full overflow-hidden transition-opacity duration-300 opacity-[0.94] hover:opacity-100">
 
