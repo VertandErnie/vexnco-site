@@ -30,23 +30,48 @@ export default function HomePage() {
         </p>
 
         {/* Entry points */}
-        <div className="mt-14 grid gap-4 max-w-xl">
-          <VEMicroCard
-            title="1 · The Problem"
-            subtitle="Start Here"
-            href="/problem"
-          />
-          <VEMicroCard
-            title="2 · VE Model at a Glance"
-            subtitle="Concept Layer"
-            href="/model"
-          />
-          <VEMicroCard
-            title="3 · Early Prototypes & Demos"
-            subtitle="Explore"
-            href="/prototypes"
-          />
+        <div className="mt-12 max-w-md">
+  <a
+    href="/demo"
+    className="
+      group
+      relative
+      block
+      rounded-[22px]
+      border border-white/10
+      bg-gradient-to-br from-white/[0.04] to-white/[0.02]
+      px-6 py-5
+      transition-all
+      hover:border-[#E0AE52]/40
+      hover:shadow-[0_0_40px_rgba(224,174,82,0.12)]
+    "
+  >
+    <div className="flex items-center justify-between">
+      <div>
+        <div className="text-sm uppercase tracking-widest text-frost/50">
+          Interactive Prototype
         </div>
+        <div className="mt-1 text-lg font-medium text-concrete">
+          Experience the Demo
+        </div>
+      </div>
+
+      <div className="
+        h-9 w-9 rounded-full
+        bg-gradient-to-br from-[#E0AE52] to-[#D25A2C]
+        text-black
+        flex items-center justify-center
+        text-sm font-semibold
+        shadow-[0_0_20px_rgba(224,174,82,0.35)]
+        group-hover:scale-105
+        transition
+      ">
+        →
+      </div>
+    </div>
+  </a>
+</div>
+
 
         {/* Gentle guidance (not a panel) */}
         <p className="mt-10 max-w-xl text-[0.85rem] text-frost/60">
