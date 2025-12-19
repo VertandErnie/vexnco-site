@@ -27,7 +27,7 @@ export default function DemoPage() {
         <div className="pointer-events-none absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#0b0b0b] to-transparent z-10" />
 
         {/* BOTTOM UI MASK — hides CodePen footer */}
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#0b0b0b] to-transparent z-10" />
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#0b0b0b] to-transparent z-10" />
       </div>
     </section>
   );
