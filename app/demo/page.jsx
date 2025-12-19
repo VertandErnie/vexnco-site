@@ -30,7 +30,7 @@ export default function DemoPage() {
         <iframe
           src="https://codepen.io/team/vert/embed/pvymVNM?default-tab=result"
           title="Operational Physics Shell Demo"
-          className="w-full h-[85vh] bg-black"
+          className="w-full h-[calc(100vh-72px)] bg-black"
           loading="lazy"
           frameBorder="0"
           allowFullScreen
