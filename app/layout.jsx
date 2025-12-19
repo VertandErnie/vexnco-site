@@ -50,25 +50,22 @@ export default function RootLayout({ children }) {
 
               {/* Nav */}
               <nav className="hidden md:flex gap-6 text-[0.8rem] tracking-wide text-frost/70">
-                {[
-                  ["Overview", "/"],
-                  ["Problem", "/problem"],
-                  ["VE Model", "/model"],
-                  ["NCO", "/nco"],
-                  ["Prototypes", "/prototypes"],
-                  ["Roadmap", "/roadmap"],
-                  ["Demo", "/demo"],
-                  ["Team & Ask", "/team"],
-                ].map(([label, href]) => (
-                  <a
-                    key={href}
-                    href={href}
-                    className="transition-colors hover:text-[#E0AE52]"
-                  >
-                    {label}
-                  </a>
-                ))}
-              </nav>
+  {[
+    ["Overview", "/"],
+    ["Problem", "/problem"],
+    ["VE Model", "/model"],
+    ["NCO", "/nco"],
+  ].map(([label, href]) => (
+    <a
+      key={href}
+      href={href}
+      className="transition-colors hover:text-[#E0AE52]"
+    >
+      {label}
+    </a>
+  ))}
+</nav>
+
             </div>
           </header>
 
