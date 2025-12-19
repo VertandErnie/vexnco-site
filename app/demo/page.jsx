@@ -5,14 +5,22 @@ export default function DemoPage() {
       <div className="pointer-events-none absolute -top-64 -left-64 h-[700px] w-[700px] rounded-full bg-ember/10 blur-[240px]" />
       <div className="pointer-events-none absolute -bottom-64 -right-64 h-[700px] w-[700px] rounded-full bg-molten/10 blur-[240px]" />
 
-      {/* Full-bleed iframe */}
-      <iframe
-        src="https://codepen.io/team/vert/embed/pvymVNM?default-tab=result&embed-version=2"
-        title="Operational Physics Shell Demo"
-        className="absolute inset-0 w-full h-full border-0"
-        loading="lazy"
-        allowFullScreen
-      />
+      {/* Full-bleed iframe wrapper */}
+      <div className="relative h-full w-full overflow-hidden">
+        <iframe
+          src="https://codepen.io/team/vert/embed/pvymVNM?default-tab=result&editable=false&theme-id=dark"
+          title="Operational Physics Shell Demo"
+          className="absolute inset-0 w-full h-full border-0 bg-black"
+          loading="lazy"
+          allowFullScreen
+        />
+
+        {/* TOP UI MASK — hides CodePen header */}
+        <div className="pointer-events-none absolute top-0 left-0 right-0 h-14 bg-gradient-to-b from-[#0b0b0b] to-transparent z-10" />
+
+        {/* BOTTOM UI MASK — hides CodePen footer */}
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#0b0b0b] to-transparent z-10" />
+      </div>
     </section>
   );
 }
