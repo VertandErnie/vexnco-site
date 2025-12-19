@@ -2,7 +2,10 @@ import VEMicroCard from "../components/VEMicroCard";
 
 export default function HomePage() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-[#0b0b0b]">
+  {/* VE material gradient base */}
+  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_15%_10%,rgba(224,174,82,0.08),transparent_60%),radial-gradient(900px_500px_at_85%_30%,rgba(210,90,44,0.10),transparent_65%),linear-gradient(to_bottom,#0b0b0b,#090909,#070707)]" />
+
       {/* Ambient material glow */}
       <div className="pointer-events-none absolute -top-48 -left-48 h-[520px] w-[520px] rounded-full bg-molten/10 blur-[200px]" />
       <div className="pointer-events-none absolute -bottom-48 -right-48 h-[520px] w-[520px] rounded-full bg-ember/10 blur-[200px]" />
