@@ -10,7 +10,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError("");
 
-    if (password !== "ve-access") {
+    if (password !== "1012") {
       setError("Incorrect access key.");
       return;
     }
