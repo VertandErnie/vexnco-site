@@ -9,21 +9,23 @@ export default function LoginPage() {
   const validPasswords = ["1012", "2theMoon!"];
 
   async function handleSubmit(e) {
-    e.preventDefault();
-    setError("");
+  e.preventDefault();
+  setError("");
 
-    if (!validPasswords.includes(password)) {
-      setError("Incorrect access key.");
-      return;
-    }
+  const allowedPasswords = ["1012", "2theMoon!"];
 
-    await fetch("/api/auth", {
-      method: "POST",
-      body: JSON.stringify({ ok: true }),
-    });
-
-    window.location.href = "/";
+  if (!allowedPasswords.includes(password)) {
+    setError("Incorrect access key.");
+    return;
   }
+
+  await fetch("/api/auth", {
+    method: "POST",
+    body: JSON.stringify({ ok: true }),
+  });
+
+  window.location.href = "/";
+}
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0b0b0b] via-[#121212] to-[#0b0b0b] relative overflow-hidden">
