@@ -6,30 +6,27 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const validPasswords = ["1012", "2theMoon!"];
-
   async function handleSubmit(e) {
-  e.preventDefault();
-  setError("");
+    e.preventDefault();
+    setError("");
 
-  const allowedPasswords = ["1012", "2theMoon!"];
+    const allowedPasswords = ["1012", "2theMoon!"];
 
-  if (!allowedPasswords.includes(password)) {
-    setError("Incorrect access key.");
-    return;
+    if (!allowedPasswords.includes(password)) {
+      setError("Incorrect access key.");
+      return;
+    }
+
+    await fetch("/api/auth", {
+      method: "POST",
+      body: JSON.stringify({ ok: true }),
+    });
+
+    window.location.href = "/";
   }
 
-  await fetch("/api/auth", {
-    method: "POST",
-    body: JSON.stringify({ ok: true }),
-  });
-
-  window.location.href = "/";
-}
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0b0b0b] via-[#121212] to-[#0b0b0b] relative overflow-hidden">
-      {/* ambient steel glow */}
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0b0b0b] via-[#121212] to-[#0b0b0b]">
       <div className="pointer-events-none absolute -top-40 -left-40 h-[420px] w-[420px] rounded-full bg-molten/10 blur-[180px]" />
       <div className="pointer-events-none absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-ember/10 blur-[180px]" />
 
