@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useState } from "react";
 
 export default function LoginPage() {
@@ -12,9 +13,9 @@ export default function LoginPage() {
 
     const allowedPasswords = ["1012", "2theMoon!"];
 
-    if (!allowedPasswords.includes(password)) {
-      setError("Incorrect access key.");
-      return;
+    if (!validPasswords.includes(password)) {
+  setError("Incorrect access key.");
+  return;
     }
 
     await fetch("/api/auth", {
