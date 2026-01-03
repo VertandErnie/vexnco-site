@@ -19,7 +19,6 @@ export default function LoginPage() {
 
     await fetch("/api/auth", {
       method: "POST",
-      body: JSON.stringify({ ok: true }),
     });
 
     window.location.href = "/";
@@ -27,6 +26,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0b0b0b] via-[#121212] to-[#0b0b0b]">
+      {/* Ambient glow */}
       <div className="pointer-events-none absolute -top-40 -left-40 h-[420px] w-[420px] rounded-full bg-molten/10 blur-[180px]" />
       <div className="pointer-events-none absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-ember/10 blur-[180px]" />
 
