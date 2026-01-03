@@ -10,7 +10,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError("");
 
-    if (password !== "1012") {
+    if (password !== "1012", "2theMoon!",) {
       setError("Incorrect access key.");
       return;
     }
