@@ -11,7 +11,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError("");
 
-    const allowedPasswords = ["1012", "2theMoon!"];
+    const allowedPasswords = ["1012"];
 
     if (!validPasswords.includes(password)) {
   setError("Incorrect access key.");
