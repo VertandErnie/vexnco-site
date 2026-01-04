@@ -95,6 +95,46 @@ export default function HowWeWorkPage() {
     },
   ];
 
+  // CodePen collections can't be embedded (blocked by CodePen security headers).
+  // But individual pens CAN be embedded via /embed/:hash endpoints.
+  const workingCollection = {
+    name: "Website (Collection)",
+    href: "https://codepen.io/collection/pjrgrm",
+  };
+
+  const workingPreviewEmbeds = [
+    {
+      name: "VE × NCO Narrative Surface",
+      embedSrc:
+        "https://codepen.io/team/vert/embed/qENWezZ?default-tab=result&theme-id=dark",
+      href: "https://codepen.io/team/vert/details/qENWezZ",
+    },
+    {
+      name: "Operational Physics Shell v2",
+      embedSrc:
+        "https://codepen.io/team/vert/embed/pvymVNM?default-tab=result&theme-id=dark",
+      href: "https://codepen.io/team/vert/details/pvymVNM",
+    },
+    {
+      name: "Foundational Alignment Surface",
+      embedSrc:
+        "https://codepen.io/Chris-Graham-the-lessful/embed/azNPKbg?default-tab=result&theme-id=dark",
+      href: "https://codepen.io/Chris-Graham-the-lessful/details/azNPKbg",
+    },
+    {
+      name: "Execution Flow Exploration",
+      embedSrc:
+        "https://codepen.io/Chris-Graham-the-lessful/embed/qEZgpBo?default-tab=result&theme-id=dark",
+      href: "https://codepen.io/Chris-Graham-the-lessful/details/qEZgpBo",
+    },
+    {
+      name: "Deep Dive System Module",
+      embedSrc:
+        "https://codepen.io/Chris-Graham-the-lessful/embed/KwzJdOM?default-tab=result&theme-id=dark",
+      href: "https://codepen.io/Chris-Graham-the-lessful/details/KwzJdOM",
+    },
+  ];
+
   return (
     <section className="relative min-h-screen bg-[#0b0b0b] overflow-hidden">
       {/* Ambient material glow */}
@@ -118,9 +158,7 @@ export default function HowWeWorkPage() {
 
         {/* Core Tools */}
         <div>
-          <h2 className="text-xl font-semibold text-concrete mb-6">
-            Core Tools
-          </h2>
+          <h2 className="text-xl font-semibold text-concrete mb-6">Core Tools</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {tools.map((tool) => (
@@ -150,9 +188,7 @@ export default function HowWeWorkPage() {
                   {tool.role}
                 </div>
 
-                <p className="mt-2 text-sm text-frost/70">
-                  {tool.description}
-                </p>
+                <p className="mt-2 text-sm text-frost/70">{tool.description}</p>
               </div>
             ))}
           </div>
@@ -279,9 +315,7 @@ export default function HowWeWorkPage() {
                   </a>
                 </div>
 
-                <p className="mt-3 text-sm text-frost/70">
-                  {pen.description}
-                </p>
+                <p className="mt-3 text-sm text-frost/70">{pen.description}</p>
               </div>
             ))}
           </div>
@@ -289,22 +323,66 @@ export default function HowWeWorkPage() {
 
         {/* Working CodePen Collection */}
         <div>
-          <h2 className="text-xl font-semibold text-concrete mb-3">
-            Working CodePen Collection
-          </h2>
+          <div className="flex items-start justify-between gap-6 flex-wrap">
+            <div>
+              <h2 className="text-xl font-semibold text-concrete mb-3">
+                Working CodePen Collection
+              </h2>
+              <p className="max-w-3xl text-frost/70 text-sm">
+                This view reflects the active working surface in CodePen. Not all
+                pens are canonical or complete; this space exists to support
+                exploration and iteration.
+              </p>
+            </div>
 
-          <p className="max-w-3xl text-frost/70 text-sm mb-5">
-            This view reflects the active working surface in CodePen. Not all
-            pens below are canonical or complete; this space exists to support
-            exploration and iteration.
-          </p>
+            <a
+              href={workingCollection.href}
+              target="_blank"
+              className="text-[0.75rem] text-molten hover:underline whitespace-nowrap mt-1"
+            >
+              Open collection →
+            </a>
+          </div>
 
-          <div className="rounded-[16px] overflow-hidden border border-white/5">
-            <iframe
-              src="https://codepen.io/collection/pjrgrm"
-              className="w-full h-[600px]"
-              loading="lazy"
-            />
+          <div className="mt-6 rounded-[16px] border border-white/5 bg-[#141414]/50 backdrop-blur-md p-5">
+            <div className="text-[0.7rem] uppercase tracking-widest text-frost/50 mb-4">
+              Working Preview
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {workingPreviewEmbeds.map((item) => (
+                <div
+                  key={item.name}
+                  className="rounded-[14px] overflow-hidden border border-white/5 bg-[#0f0f0f]"
+                >
+                  <div className="flex items-center justify-between px-4 py-3 border-b border-white/5">
+                    <div className="text-sm font-medium text-concrete">
+                      {item.name}
+                    </div>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      className="text-[0.75rem] text-molten hover:underline whitespace-nowrap"
+                    >
+                      Open →
+                    </a>
+                  </div>
+
+                  <iframe
+                    src={item.embedSrc}
+                    title={item.name}
+                    className="w-full h-[340px]"
+                    loading="lazy"
+                    allow="clipboard-write; fullscreen"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-4 text-xs text-frost/50">
+              Note: CodePen blocks embedding full collection pages for security
+              reasons. Individual pen embeds are supported and kept live here.
+            </div>
           </div>
         </div>
       </div>
