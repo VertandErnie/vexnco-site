@@ -50,30 +50,48 @@ export default function HowWeWorkPage() {
     },
   ];
 
-  const pens = [
+  const authoritativePens = [
+    {
+      name: "VE × NCO Website System (Project)",
+      scope: "VE",
+      description:
+        "Project-level container for the VE × NCO website system, including layout, structure, and interaction experiments.",
+      href: "https://codepen.io/team/vert/project/details/ZwjBnJ",
+    },
+    {
+      name: "VE × NCO Narrative Surface",
+      scope: "VE",
+      description:
+        "Narrative and structural exploration of VE × NCO concepts as a coherent system surface.",
+      href: "https://codepen.io/team/vert/details/qENWezZ",
+    },
     {
       name: "Operational Physics Shell v2",
       scope: "VE",
-      owner: "Chris",
       description:
-        "Primary behavioral visualization of VE as a moving system.",
-      href: "https://codepen.io/team/vert/pen/pvymVNM",
+        "Primary behavioral visualization of VE as a moving operational system.",
+      href: "https://codepen.io/team/vert/details/pvymVNM",
     },
     {
-      name: "VE / NCO Visual System",
-      scope: "VE",
-      owner: "Chris",
+      name: "Foundational Alignment Surface",
+      scope: "VE · NCO",
       description:
-        "Color, material, and UI primitives for VE and NCO.",
-      href: "#",
+        "Explores alignment, constraints, and system intent before execution layers are applied.",
+      href: "https://codepen.io/Chris-Graham-the-lessful/details/azNPKbg",
     },
     {
-      name: "Early Flow Experiments",
-      scope: "VE",
-      owner: "Tyler",
+      name: "Execution Flow Exploration",
+      scope: "VE · NCO",
       description:
-        "Historical explorations of system dynamics and drift.",
-      href: "#",
+        "Investigates how intent transitions into execution across system boundaries.",
+      href: "https://codepen.io/Chris-Graham-the-lessful/details/qEZgpBo",
+    },
+    {
+      name: "Deep Dive System Module",
+      scope: "VE",
+      description:
+        "Focused exploration of a single system layer or rule set in isolation.",
+      href: "https://codepen.io/Chris-Graham-the-lessful/details/KwzJdOM",
     },
   ];
 
@@ -151,8 +169,7 @@ export default function HowWeWorkPage() {
             in moving ideas from concept to deployed system.
           </p>
 
-          <div className="mt-6 rounded-[16px] border border-white/5 bg-[#141414]/50 backdrop-blur-md p-6 text-sm text-frost/70 space-y-6">
-            {/* Flow */}
+          <div className="mt-6 rounded-[16px] border border-white/5 bg-[#141414]/50 backdrop-blur-md p-6 space-y-6 text-sm text-frost/70">
             <div>
               <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-concrete font-medium">
                 <span>Think</span>
@@ -165,82 +182,21 @@ export default function HowWeWorkPage() {
                 <span className="text-frost/40">→</span>
                 <span>Ship</span>
               </div>
-
               <div className="mt-2 text-frost/60">
                 ChatGPT → CodePen → Cursor / Xcode → GitHub → Vercel
               </div>
             </div>
-
-            {/* Table */}
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-sm">
-                <thead>
-                  <tr className="border-b border-white/10 text-frost/50">
-                    <th className="text-left py-2 pr-4 font-medium">Stage</th>
-                    <th className="text-left py-2 pr-4 font-medium">Tool</th>
-                    <th className="text-left py-2 pr-4 font-medium">Purpose</th>
-                    <th className="text-left py-2 font-medium">Hands Off To</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-white/5">
-                    <td className="py-3 pr-4 text-concrete">Think</td>
-                    <td className="pr-4">ChatGPT</td>
-                    <td className="pr-4">
-                     Form system models, language, constraints, and reasoning
-                      before any implementation exists.
-                    </td>
-                    <td>CodePen</td>
-                  </tr>
-                  <tr className="border-b border-white/5">
-                    <td className="py-3 pr-4 text-concrete">Explore</td>
-                    <td className="pr-4">CodePen</td>
-                    <td className="pr-4">
-                     Test behaviors, flows, and visual logic in isolation without
-                      committing to architecture.
-                    </td>
-                    <td>Cursor / Xcode</td>
-                  </tr>
-                  <tr className="border-b border-white/5">
-                    <td className="py-3 pr-4 text-concrete">Build</td>
-                    <td className="pr-4">Cursor / Xcode</td>
-                    <td className="pr-4">
-                     Turn validated behavior into real, executable systems.
-                    </td>
-                    <td>GitHub</td>
-                  </tr>
-                  <tr className="border-b border-white/5">
-                    <td className="py-3 pr-4 text-concrete">Record</td>
-                    <td className="pr-4">GitHub</td>
-                    <td className="pr-4">
-                     Serve as the canonical record for code, history, and shared
-                      state.
-                    </td>
-                    <td>Vercel</td>
-                  </tr>
-                  <tr>
-                    <td className="py-3 pr-4 text-concrete">Ship</td>
-                    <td className="pr-4">Vercel</td>
-                    <td className="pr-4">
-                     Deploy and expose working systems for use, review, and
-                      iteration.
-                    </td>
-                    <td>—</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
         </div>
 
-        {/* CodePen reference */}
+        {/* Authoritative CodePen References */}
         <div>
           <h2 className="text-xl font-semibold text-concrete mb-6">
-            Shared CodePen Reference
+            Authoritative CodePen References
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {pens.map((pen) => (
+            {authoritativePens.map((pen) => (
               <div
                 key={pen.name}
                 className="rounded-[20px] border border-white/5 bg-[#141414]/60 backdrop-blur-md p-5"
@@ -251,7 +207,7 @@ export default function HowWeWorkPage() {
                       {pen.name}
                     </div>
                     <div className="text-[0.7rem] uppercase tracking-widest text-frost/50">
-                      {pen.scope} · {pen.owner}
+                      {pen.scope}
                     </div>
                   </div>
                   <a
@@ -268,6 +224,26 @@ export default function HowWeWorkPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Working CodePen Collection */}
+        <div>
+          <h2 className="text-xl font-semibold text-concrete mb-3">
+            Working CodePen Collection
+          </h2>
+          <p className="text-frost/60 text-sm max-w-3xl mb-6">
+            This view reflects the active working surface. Not all pens below are
+            canonical or complete, but they represent ongoing exploration and
+            iteration.
+          </p>
+
+          <div className="rounded-[20px] border border-white/5 bg-[#0f0f0f]/60 backdrop-blur-md overflow-hidden">
+            <iframe
+              src="https://codepen.io/collection/pjrgrm"
+              className="w-full h-[600px]"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
