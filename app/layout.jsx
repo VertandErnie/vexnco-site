@@ -11,7 +11,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="antialiased text-frost bg-[#0b0b0b]">
         <div className="min-h-screen flex flex-col">
-
           {/* HEADER */}
           <header
             className="
@@ -25,7 +24,6 @@ export default function RootLayout({ children }) {
             "
           >
             <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-
               {/* Brand */}
               <div className="flex items-center gap-3">
                 <div
@@ -49,7 +47,7 @@ export default function RootLayout({ children }) {
               </div>
 
               {/* Nav */}
-              <nav className="hidden md:flex gap-6 text-[0.8rem] tracking-wide text-frost/70">
+              <nav className="hidden md:flex items-center gap-6 text-[0.8rem] tracking-wide text-frost/70">
                 {[
                   ["Overview", "/"],
                   ["Problem", "/problem"],
@@ -65,8 +63,49 @@ export default function RootLayout({ children }) {
                     {label}
                   </a>
                 ))}
-              </nav>
 
+                {/* Other Products dropdown */}
+                <div className="relative group">
+                  <button
+                    type="button"
+                    className="transition-colors hover:text-[#E0AE52] flex items-center gap-2"
+                  >
+                    Other Products
+                    <span className="text-frost/40 group-hover:text-[#E0AE52]">
+                      ▾
+                    </span>
+                  </button>
+
+                  <div
+                    className="
+                      absolute right-0 top-full mt-3 w-56
+                      rounded-[14px] border border-white/10
+                      bg-[#121212]/95 backdrop-blur-md
+                      shadow-[0_18px_55px_rgba(0,0,0,0.55)]
+                      opacity-0 translate-y-1 pointer-events-none
+                      group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                      transition
+                    "
+                  >
+                    <div className="p-2">
+                      <a
+                        href="/curate"
+                        className="
+                          block rounded-[12px] px-3 py-2
+                          text-sm text-frost/80
+                          hover:bg-white/5 hover:text-[#E0AE52]
+                          transition
+                        "
+                      >
+                        Curate
+                        <div className="text-[0.7rem] text-frost/45 mt-0.5">
+                          Consent-based iOS app
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
             </div>
           </header>
 
@@ -80,7 +119,6 @@ export default function RootLayout({ children }) {
               <span>Not for distribution</span>
             </div>
           </footer>
-
         </div>
       </body>
     </html>
