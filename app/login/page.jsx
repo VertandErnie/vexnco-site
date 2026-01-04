@@ -21,7 +21,10 @@ export default function LoginPage() {
       method: "POST",
     });
 
-    window.location.href = "/";
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get("from") || "/";
+    window.location.href = from;
+
   }
 
   return (
