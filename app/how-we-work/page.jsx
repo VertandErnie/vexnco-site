@@ -158,7 +158,7 @@ export default function HowWeWorkPage() {
           </div>
         </div>
 
-        {/* How they fit together */}
+        {/* How tools fit together */}
         <div className="max-w-5xl">
           <h2 className="text-xl font-semibold text-concrete mb-4">
             How These Tools Fit Together
@@ -169,7 +169,7 @@ export default function HowWeWorkPage() {
             in moving ideas from concept to deployed system.
           </p>
 
-          <div className="mt-6 rounded-[16px] border border-white/5 bg-[#141414]/50 backdrop-blur-md p-6 space-y-6 text-sm text-frost/70">
+          <div className="mt-6 rounded-[16px] border border-white/5 bg-[#141414]/50 backdrop-blur-md p-6 text-sm text-frost/70 space-y-6">
             <div>
               <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-concrete font-medium">
                 <span>Think</span>
@@ -182,9 +182,69 @@ export default function HowWeWorkPage() {
                 <span className="text-frost/40">→</span>
                 <span>Ship</span>
               </div>
+
               <div className="mt-2 text-frost/60">
                 ChatGPT → CodePen → Cursor / Xcode → GitHub → Vercel
               </div>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-white/10 text-frost/50">
+                    <th className="text-left py-2 pr-4 font-medium">Stage</th>
+                    <th className="text-left py-2 pr-4 font-medium">Tool</th>
+                    <th className="text-left py-2 pr-4 font-medium">Purpose</th>
+                    <th className="text-left py-2 font-medium">Hands Off To</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 pr-4 text-concrete">Think</td>
+                    <td className="pr-4">ChatGPT</td>
+                    <td className="pr-4">
+                      Form system models, language, constraints, and reasoning
+                      before any implementation exists.
+                    </td>
+                    <td>CodePen</td>
+                  </tr>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 pr-4 text-concrete">Explore</td>
+                    <td className="pr-4">CodePen</td>
+                    <td className="pr-4">
+                      Test behaviors, flows, and visual logic in isolation without
+                      committing to architecture.
+                    </td>
+                    <td>Cursor / Xcode</td>
+                  </tr>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 pr-4 text-concrete">Build</td>
+                    <td className="pr-4">Cursor / Xcode</td>
+                    <td className="pr-4">
+                      Turn validated behavior into real, executable systems.
+                    </td>
+                    <td>GitHub</td>
+                  </tr>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 pr-4 text-concrete">Record</td>
+                    <td className="pr-4">GitHub</td>
+                    <td className="pr-4">
+                      Serve as the canonical record for code, history, and shared
+                      state.
+                    </td>
+                    <td>Vercel</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 pr-4 text-concrete">Ship</td>
+                    <td className="pr-4">Vercel</td>
+                    <td className="pr-4">
+                      Deploy and expose working systems for use, review, and
+                      iteration.
+                    </td>
+                    <td>—</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -232,13 +292,14 @@ export default function HowWeWorkPage() {
           <h2 className="text-xl font-semibold text-concrete mb-3">
             Working CodePen Collection
           </h2>
-          <p className="text-frost/60 text-sm max-w-3xl mb-6">
-            This view reflects the active working surface. Not all pens below are
-            canonical or complete, but they represent ongoing exploration and
-            iteration.
+
+          <p className="max-w-3xl text-frost/70 text-sm mb-5">
+            This view reflects the active working surface in CodePen. Not all
+            pens below are canonical or complete; this space exists to support
+            exploration and iteration.
           </p>
 
-          <div className="rounded-[20px] border border-white/5 bg-[#0f0f0f]/60 backdrop-blur-md overflow-hidden">
+          <div className="rounded-[16px] overflow-hidden border border-white/5">
             <iframe
               src="https://codepen.io/collection/pjrgrm"
               className="w-full h-[600px]"
