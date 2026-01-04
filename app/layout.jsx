@@ -64,21 +64,29 @@ export default function RootLayout({ children }) {
                   </a>
                 ))}
 
-                {/* Other Products dropdown */}
+                {/* Other Products dropdown (FIXED hover persistence) */}
                 <div className="relative group">
-                  <button
-                    type="button"
-                    className="transition-colors hover:text-[#E0AE52] flex items-center gap-2"
+                  {/* Hover anchor */}
+                  <div
+                    className="
+                      flex items-center gap-2
+                      cursor-pointer
+                      transition-colors
+                      group-hover:text-[#E0AE52]
+                      py-2
+                    "
                   >
-                    Other Products
+                    <span>Other Products</span>
                     <span className="text-frost/40 group-hover:text-[#E0AE52]">
                       ▾
                     </span>
-                  </button>
+                  </div>
 
+                  {/* Dropdown */}
                   <div
                     className="
-                      absolute right-0 top-full mt-3 w-56
+                      absolute right-0 top-full
+                      mt-1 w-56
                       rounded-[14px] border border-white/10
                       bg-[#121212]/95 backdrop-blur-md
                       shadow-[0_18px_55px_rgba(0,0,0,0.55)]
@@ -87,6 +95,9 @@ export default function RootLayout({ children }) {
                       transition
                     "
                   >
+                    {/* Hover bridge */}
+                    <div className="absolute -top-3 left-0 right-0 h-3" />
+
                     <div className="p-2">
                       <a
                         href="/curate"
