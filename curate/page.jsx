@@ -161,7 +161,7 @@ export default function CuratePage() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#07080c]">
       {/* Curate ambient gradient */}
-      <div className="pointer-events-none absolute inset-0 opacity-90 bg-[radial-gradient(1200px_900px_at_20%_10%,rgba(168,85,247,0.25),transparent_60%),radial-gradient(900px_700px_at_80%_70%,rgba(59,130,246,0.22),transparent_55%),radial-gradient(700px_500px_at_40%_90%,rgba(236,72,153,0.18),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_900px_at_20%_10%,rgba(236,72,153,0.38),transparent_55%),radial-gradient(1000px_800px_at_80%_65%,rgba(59,130,246,0.38),transparent_55%),radial-gradient(700px_500px_at_40%_90%,rgba(168,85,247,0.32),transparent_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-black/45" />
 
       <div className="relative max-w-6xl mx-auto px-6 pt-28 pb-32 space-y-16">
@@ -194,7 +194,7 @@ export default function CuratePage() {
             ].map((chip) => (
               <span
                 key={chip}
-                className="text-[0.7rem] uppercase tracking-widest text-white/60 border border-white/10 bg-white/5 rounded-full px-3 py-1"
+                className="text-[0.7rem] uppercase tracking-widest text-white/60 border border-white/10 bg-white/8 rounded-full px-3 py-1"
               >
                 {chip}
               </span>
@@ -204,7 +204,7 @@ export default function CuratePage() {
 
         {/* Snapshot panels */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div className="rounded-[18px] border border-white/10 bg-white/5 backdrop-blur-md p-6">
+          <div className="rounded-[18px] border border-white/10 bg-white/8 backdrop-blur-md p-6">
             <div className="text-white font-medium">Status</div>
             <div className="mt-2 text-white/75 text-sm leading-relaxed">
               Late MVP / pre-public alpha. Core flows implemented end-to-end.
@@ -212,7 +212,7 @@ export default function CuratePage() {
             </div>
           </div>
 
-          <div className="rounded-[18px] border border-white/10 bg-white/5 backdrop-blur-md p-6">
+          <div className="rounded-[18px] border border-white/10 bg-white/8 backdrop-blur-md p-6">
             <div className="text-white font-medium">Cost floor</div>
             <div className="mt-2 text-white/75 text-sm leading-relaxed">
               The only mandatory cost to reach the App Store is the Apple
@@ -221,7 +221,7 @@ export default function CuratePage() {
             </div>
           </div>
 
-          <div className="rounded-[18px] border border-white/10 bg-white/5 backdrop-blur-md p-6">
+          <div className="rounded-[18px] border border-white/10 bg-white/8 backdrop-blur-md p-6">
             <div className="text-white font-medium">Why the ROI is real</div>
             <div className="mt-2 text-white/75 text-sm leading-relaxed">
               The behavior already exists. Couples are hacking a solution today.
@@ -233,7 +233,7 @@ export default function CuratePage() {
 
         {/* Problem + whitespace */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md p-7">
+          <div className="rounded-[22px] border border-white/10 bg-white/8 backdrop-blur-md p-7">
             <div className="text-[0.75rem] uppercase tracking-widest text-white/55">
               The problem
             </div>
@@ -253,7 +253,7 @@ export default function CuratePage() {
             </p>
           </div>
 
-          <div className="rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md p-7">
+          <div className="rounded-[22px] border border-white/10 bg-white/8 backdrop-blur-md p-7">
             <div className="text-[0.75rem] uppercase tracking-widest text-white/55">
               The whitespace
             </div>
@@ -329,7 +329,7 @@ export default function CuratePage() {
             ].map((s) => (
               <div
                 key={s.src}
-                className="rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md p-4"
+                className="rounded-[22px] border border-white/10 bg-white/8 backdrop-blur-md p-4"
               >
                 <div className="text-[0.7rem] uppercase tracking-widest text-white/55 mb-3">
                   {s.label}
@@ -355,7 +355,7 @@ export default function CuratePage() {
 
         {/* Locked scope + status */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md p-7">
+          <div className="rounded-[22px] border border-white/10 bg-white/8 backdrop-blur-md p-7">
             <div className="text-[0.75rem] uppercase tracking-widest text-white/55">
               Product scope
             </div>
@@ -378,7 +378,7 @@ export default function CuratePage() {
             </ul>
           </div>
 
-          <div className="rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md p-7">
+          <div className="rounded-[22px] border border-white/10 bg-white/8 backdrop-blur-md p-7">
             <div className="text-[0.75rem] uppercase tracking-widest text-white/55">
               Technical status
             </div>
@@ -412,7 +412,7 @@ export default function CuratePage() {
         </div>
 
         {/* Cost + Investment */}
-        <div className="rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md p-7">
+        <div className="rounded-[22px] border border-white/10 bg-white/8 backdrop-blur-md p-7">
           <div className="flex items-start justify-between gap-6 flex-wrap">
             <div>
               <div className="text-[0.75rem] uppercase tracking-widest text-white/55">
@@ -493,7 +493,7 @@ export default function CuratePage() {
             {roadmap.map((step) => (
               <details
                 key={step.title}
-                className="rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md p-6"
+                className="rounded-[22px] border border-white/10 bg-white/8 backdrop-blur-md p-6"
               >
                 <summary className="cursor-pointer list-none">
                   <div className="flex items-start justify-between gap-6">
@@ -526,7 +526,7 @@ export default function CuratePage() {
         </div>
 
         {/* Revenue and ROI */}
-        <div className="rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md p-7">
+        <div className="rounded-[22px] border border-white/10 bg-white/8 backdrop-blur-md p-7">
           <div className="flex items-start justify-between gap-6 flex-wrap">
             <div>
               <div className="text-[0.75rem] uppercase tracking-widest text-white/55">
@@ -596,7 +596,7 @@ export default function CuratePage() {
             {faqs.map((f) => (
               <details
                 key={f.q}
-                className="rounded-[22px] border border-white/10 bg-white/5 backdrop-blur-md p-6"
+                className="rounded-[22px] border border-white/10 bg-white/8 backdrop-blur-md p-6"
               >
                 <summary className="cursor-pointer list-none">
                   <div className="text-white font-medium">{f.q}</div>
